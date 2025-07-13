@@ -1,17 +1,17 @@
 import { Config, CategoryMetadata, PresetOptions } from '../types';
 
 export const PRESET_OPTIONS: PresetOptions = {
-  art_style: ['photorealistic', 'digital art', 'oil painting', 'watercolor', 'anime', 'cartoon', 'cyberpunk', 'steampunk'],
+  art_style: ['photorealistic', 'digital art', 'oil painting', 'watercolor', 'anime', 'cartoon', 'cyberpunk'],
   mood: ['dramatic', 'peaceful', 'mysterious', 'energetic', 'melancholic', 'ethereal', 'dark', 'bright'],
   time_of_day: ['dawn', 'morning', 'midday', 'afternoon', 'golden hour', 'sunset', 'dusk', 'night'],
   weather: ['sunny', 'cloudy', 'rainy', 'stormy', 'foggy', 'snowy', 'misty', 'overcast'],
-  angle: ['eye level', 'low angle', 'high angle', "bird's eye view", "worm's eye view", 'dutch angle'],
+  angle: ['eye level', 'low angle', 'high angle', "bird's eye view"],
   shot_type: ['close-up', 'medium shot', 'wide shot', 'extreme close-up', 'full body', 'portrait'],
   depth_of_field: ['shallow depth of field', 'deep depth of field', 'bokeh', 'tilt-shift'],
   type: ['natural lighting', 'studio lighting', 'dramatic lighting', 'soft lighting', 'backlighting', 'neon lighting'],
   color_palette: ['warm colors', 'cool colors', 'monochromatic', 'vibrant', 'muted', 'pastel', 'high contrast'],
   quality: ['smooth', 'rough', 'detailed', 'soft', 'sharp', 'glossy', 'matte'],
-  image_quality: ['8K resolution', '4K resolution', 'ultra detailed', 'hyperrealistic', 'photorealistic', 'masterpiece']
+  image_quality: ['8K resolution', '4K resolution', 'ultra detailed', 'hyperrealistic', 'photorealistic']
 };
 
 export const INITIAL_CONFIG: Config = {
