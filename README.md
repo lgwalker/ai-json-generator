@@ -1,93 +1,176 @@
-# AI-JSON-Generator
+# AI Image JSON Generator
 
+A visual prompt-building React app that helps users generate structured JSON configurations for AI image generation. Users can customize elements like subject, style, environment, camera, lighting, and more through an intuitive interface.
 
+## Live Demo
 
-## Getting started
+👉 **[https://lgwalker.github.io/ai-image-json-generator/](https://lgwalker.github.io/ai-image-json-generator/)**
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Features
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- ** Visual Prompt Builder**: Intuitive interface for crafting AI image prompts
+- ** Dynamic Categories**: Customize subject, style, environment, camera, lighting, and more
+- ** Real-time Preview**: See your JSON configuration update as you build
+- ** Save & Load**: Persist presets using localStorage
+- ** Export/Import**: Download JSON files or upload existing configurations
+- ** Structured Output**: Generate clean, organized JSON for AI image tools
+  
 
-## Add your files
+## Tech Stack
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+- **Frontend**: React 18 + Vite
+- **Language**: TypeScript
+- **Styling**: TailwindCSS
+- **Deployment**: GitHub Pages
+- **Build Tool**: Vite
+- **Package Manager**: npm
+
+## Project Structure
 
 ```
-cd existing_repo
-git remote add origin https://code.wm.edu/lgwalker/ai-json-generator.git
-git branch -M main
-git push -uf origin main
+src/
+├── components/          # Reusable UI components
+│   ├── AIImagePromptGenerator.tsx
+│   ├── ConfigEditor.tsx
+│   ├── ControlPanel.tsx
+|   ├── JSONOutput.tsx
+|   ├── Modal.tsx
+|   ├── SavedConfigs.tsx
+|   └── index.ts
+├── hooks/              # Custom React hooks
+│   ├── useModal.ts
+│   ├── useDropdown.ts
+│   └── index.ts
+├── types/              # TypeScript type definitions
+│   └── index.ts
+├── constants/          # Default configuration data
+│   └── defaultConfig.ts
+├── utils/              # Helper functions
+│   └── jsonHelpers.ts
+├── App.tsx             # Main application component
+├── main.tsx            # Application entry point
+└── index.css           # Global styles
 ```
 
-## Integrate with your tools
+## Getting Started
 
-- [ ] [Set up project integrations](https://code.wm.edu/lgwalker/ai-json-generator/-/settings/integrations)
+### Prerequisites
 
-## Collaborate with your team
+- Node.js (v16 or higher)
+- npm
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+### Installation
 
-## Test and Deploy
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/lgwalker/ai-image-json-generator.git
+   cd ai-image-json-generator
+   ```
 
-Use the built-in continuous integration in GitLab.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-***
+4. **Open your browser**
+   
+   Visit `http://localhost:3000` to see the app in action.
 
-# Editing this README
+## Build & Deploy
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Build for Production
 
-## Suggestions for a good README
+```bash
+npm run build
+```
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+The built files will be in the `dist/` directory.
 
-## Name
-Choose a self-explaining name for your project.
+### Deploy to GitHub Pages
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+```bash
+npm run deploy
+```
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+This will build the project and push it to the `gh-pages` branch.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Preview Production Build
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+```bash
+npm run preview
+```
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+1. **Select Categories**: Choose from various prompt categories like Subject, Style, Environment, etc.
+2. **Customize Options**: Add, remove, or modify characteristics within each category
+3. **Real-time Preview**: Watch your JSON configuration update in real-time
+4. **Save Presets**: Store frequently used configurations for quick access
+5. **Export/Import**: Download your JSON or upload existing configurations
+6. **Copy & Use**: Copy the generated JSON for use in your AI image generation workflow
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+## Example Output
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+```json
+{
+  "subject": {
+    "main": "portrait of a woman",
+    "details": ["elegant", "confident", "professional"]
+  },
+  "style": {
+    "artistic": "photorealistic",
+    "mood": "dramatic"
+  },
+  "environment": {
+    "location": "studio",
+    "background": "dark gradient"
+  },
+  "camera": {
+    "angle": "medium shot",
+    "focus": "shallow depth of field"
+  },
+  "lighting": {
+    "type": "dramatic lighting",
+    "direction": "side lighting"
+  }
+}
+```
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+## Configuration
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+The app uses several configuration files:
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- **`vite.config.ts`**: Vite configuration for build and development
+- **`tailwind.config.js`**: TailwindCSS configuration
+- **`tsconfig.json`**: TypeScript configuration
+- **`package.json`**: Project dependencies and scripts
+
+
+## Note
+
+- localStorage has size limitations for very large configurations (To be worked on in further iterations)
+
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Built with [Vite](https://vitejs.dev/) for fast development
+- Styled with [TailwindCSS](https://tailwindcss.com/) for utility-first styling
+- Deployed on [GitHub Pages](https://pages.github.com/) for free hosting
+- Inspired by the need for structured AI image prompt generation
+
+## Author
+
+**Lily Walker**
+
+- GitHub: [@lgwalker](https://github.com/lgwalker)
+- Project Link: [https://github.com/lgwalker/ai-image-json-generator](https://github.com/lgwalker/ai-image-json-generator)
+
