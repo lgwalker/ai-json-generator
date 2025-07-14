@@ -14,6 +14,7 @@ A visual prompt-building React app that helps users generate structured JSON con
 - ** Save & Load**: Persist presets using localStorage
 - ** Export/Import**: Download JSON files or upload existing configurations
 - ** Structured Output**: Generate clean, organized JSON for AI image tools
+- ** Granular Control**: Add fields to customize any part of image
   
 
 ## Tech Stack
