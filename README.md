@@ -4,7 +4,7 @@ A visual prompt-building React app that helps users generate structured JSON con
 
 ## Live Demo
 
-👉 **[https://lgwalker.github.io/ai-image-json-generator/](https://lgwalker.github.io/ai-image-json-generator/)**
+👉 **[https://lgwalker.github.io/ai-json-generator/](https://lgwalker.github.io/ai-json-generator/)**
 
 ## Features
 
@@ -173,5 +173,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Lily Walker**
 
 - GitHub: [@lgwalker](https://github.com/lgwalker)
-- Project Link: [https://github.com/lgwalker/ai-image-json-generator](https://github.com/lgwalker/ai-image-json-generator)
+- Project Link: [https://github.com/lgwalker/ai-json-generator](https://github.com/lgwalker/ai-json-generator)
 
