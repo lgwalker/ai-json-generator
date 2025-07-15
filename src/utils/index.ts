@@ -17,7 +17,27 @@ export const removeEmptyValues = (obj: any): any => {
 
 export const generateJSON = (config: Config): string => {
   const cleanedConfig = removeEmptyValues(config);
-  return JSON.stringify(cleanedConfig, null, 2);
+  
+  // Convert comma-separated strings to arrays
+  const formattedConfig = Object.entries(cleanedConfig).reduce((acc, [key, value]) => {
+    if (typeof value === 'string' && value.includes(',')) {
+      acc[key] = value.split(',').map(v => v.trim()).filter(v => v.length > 0);
+    } else if (typeof value === 'object' && value !== null) {
+      acc[key] = Object.entries(value).reduce((objAcc: Record<string, any>, [subKey, subValue]) => {
+        if (typeof subValue === 'string' && subValue.includes(',')) {
+          objAcc[subKey] = subValue.split(',').map(v => v.trim()).filter(v => v.length > 0);
+        } else {
+          objAcc[subKey] = subValue;
+        }
+        return objAcc;
+      }, {});
+    } else {
+      acc[key] = value;
+    }
+    return acc;
+  }, {} as Config);
+  
+  return JSON.stringify(formattedConfig, null, 2);
 };
 
 export const formatCharacteristicName = (key: string): string => {
