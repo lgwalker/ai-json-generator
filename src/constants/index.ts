@@ -11,7 +11,7 @@ export const PRESET_OPTIONS: PresetOptions = {
   type: ['natural lighting', 'studio lighting', 'dramatic lighting', 'soft lighting', 'backlighting', 'neon lighting'],
   color_palette: ['warm colors', 'cool colors', 'monochromatic', 'vibrant', 'muted', 'pastel', 'high contrast'],
   quality: ['smooth', 'rough', 'detailed', 'soft', 'sharp', 'glossy', 'matte'],
-  image_quality: ['8K resolution', '4K resolution', 'ultra detailed', 'hyperrealistic', 'photorealistic']
+  image_quality: ['8K resolution', '4K resolution', 'ultra detailed', 'hyperrealistic']
 };
 
 export const INITIAL_CONFIG: Config = {
