@@ -32,12 +32,17 @@ export const getCustomInputKey = (category: string, characteristic: string): str
   return `${category}-${characteristic}`;
 };
 
+export const convertUnderscoresToSpaces = (filename: string): string => {
+  return filename.replace(/_/g, ' ');
+};
+
 export const downloadJSON = (jsonData: string, filename: string): void => {
   const blob = new Blob([jsonData], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `${filename}.json`;
+  // Replace spaces with underscores in the filename
+  a.download = `${filename.replace(/\s+/g, '_')}.json`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
