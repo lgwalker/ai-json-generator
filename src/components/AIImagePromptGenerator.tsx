@@ -265,10 +265,31 @@ const AIImagePromptGenerator = () => {
   };
 
   const clearAll = () => {
+    // Reset to the exact initial state when the component mounted
     setConfig(INITIAL_CONFIG);
     setCategoryMetadata(INITIAL_CATEGORY_METADATA);
     setConfigName('');
     setCustomInputs({});
+    
+    // Reset all dropdown states
+    Object.keys(openDropdowns).forEach(key => {
+      closeDropdown(key);
+    });
+
+    // Ensure all default characteristics are restored
+    Object.entries(INITIAL_CONFIG).forEach(([category, characteristics]) => {
+      if (category === 'subject') return; // Skip subject as it's handled differently
+      
+      // Ensure all default characteristics exist in the config
+      Object.keys(characteristics).forEach(characteristic => {
+        if (!config[category]?.[characteristic]) {
+          setConfig(prev => ({
+            ...prev,
+            [category]: { ...prev[category], [characteristic]: '' }
+          }));
+        }
+      });
+    });
   };
 
   return (
