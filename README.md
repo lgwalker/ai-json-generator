@@ -45,9 +45,9 @@ src/
 ├── types/              # TypeScript type definitions
 │   └── index.ts
 ├── constants/          # Default configuration data
-│   └── defaultConfig.ts
+│   └── index.ts
 ├── utils/              # Helper functions
-│   └── jsonHelpers.ts
+│   └── index.ts
 ├── App.tsx             # Main application component
 ├── main.tsx            # Application entry point
 └── index.css           # Global styles
