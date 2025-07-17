@@ -3,7 +3,7 @@ export interface Config {
     style: { art_style: string; mood: string };
     environment: { location: string; time_of_day: string; weather: string };
     lighting: { type: string; color_palette: string; dominant_colors: string };
-    texture: { quality: string; image_quality: string };
+    visual_characteristics: {aspect_ratio: string; texture: string; image_quality: string};
     camera: { angle: string; shot_type: string; depth_of_field: string };
     [key: string]: any;
   }

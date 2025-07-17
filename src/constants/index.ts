@@ -10,7 +10,8 @@ export const PRESET_OPTIONS: PresetOptions = {
   depth_of_field: ['shallow depth of field', 'deep depth of field', 'bokeh', 'tilt-shift'],
   type: ['natural lighting', 'studio lighting', 'dramatic lighting', 'soft lighting', 'backlighting', 'neon lighting'],
   color_palette: ['warm colors', 'cool colors', 'monochromatic', 'vibrant', 'muted', 'pastel', 'high contrast'],
-  quality: ['smooth', 'rough', 'detailed', 'soft', 'sharp', 'glossy', 'matte'],
+  aspect_ratio: ['16:9', '4:3', '1:1', '5:3', '5:4', '16:10'],
+  texture: ['smooth', 'rough', 'detailed', 'soft', 'sharp', 'glossy', 'matte'],
   image_quality: ['8K resolution', '4K resolution', 'ultra detailed', 'hyperrealistic']
 };
 
@@ -19,14 +20,15 @@ export const INITIAL_CONFIG: Config = {
   style: { art_style: '', mood: '' },
   environment: { location: '', time_of_day: '', weather: '' },
   lighting: { type: '', color_palette: '', dominant_colors: '' },
-  texture: { quality: '', image_quality: '' },
+  visual_characteristics: {aspect_ratio: '', texture: '', image_quality: '' },
   camera: { angle: '', shot_type: '', depth_of_field: '' }
 };
+
 
 export const INITIAL_CATEGORY_METADATA: CategoryMetadata = {
   style: { name: 'Style', color: 'blue-900' },
   environment: { name: 'Environment', color: 'blue-900' },
   lighting: { name: 'Lighting', color: 'blue-900' },
-  texture: { name: 'Texture & Quality', color: 'blue-900' },
+  visual_characteristics: { name: 'Visual Characteristics', color: 'blue-900' },
   camera: { name: 'Camera', color: 'blue-900' }
 };
