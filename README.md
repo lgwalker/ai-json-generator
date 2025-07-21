@@ -6,6 +6,9 @@ A visual prompt-building React app that helps users generate structured JSON con
 
 👉 **[https://lgwalker.github.io/ai-json-generator/](https://lgwalker.github.io/ai-json-generator/)**
 
+👉 **[Watch Demo video](https://drive.google.com/file/d/1muR8poubksvb1Y8OJJy54xW86MWYPEHA/view?usp=sharing)**
+
+
 ## Features
 
 - ** Visual Prompt Builder**: Intuitive interface for crafting AI image prompts
